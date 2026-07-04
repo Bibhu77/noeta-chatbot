@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noeta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.2/marked.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="splash">
+        <div class="splash-logo">🤖</div>
+        <div class="splash-text">Noeta</div>
+    </div>
+
+    <div class="app">
+        <aside class="sidebar">
+            <div class="brand">
+                <span class="brand-icon">🤖</span>
+                <span class="brand-name">Noeta</span>
+            </div>
+            <button id="new-chat-btn">+ New Chat</button>
+            <div class="sidebar-footer">
+                <button id="theme-btn" title="Toggle theme">🌙</button>
+            </div>
+        </aside>
+
+        <main class="main">
+            <div id="chat-box">
+                <div id="welcome-screen">
+                    <h2>Hi, I'm Noeta</h2>
+                    <p>Ask me anything — I can even search the web for live info.</p>
+                    <div class="chips">
+                        <button class="chip">Explain quantum computing simply</button>
+                        <button class="chip">Write a short poem about the ocean</button>
+                        <button class="chip">What's trending today?</button>
+                        <button class="chip">Give me 3 productivity tips</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <textarea id="user-input" rows="1" placeholder="Message Noeta..."></textarea>
+                <button id="send-btn" title="Send">➤</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
